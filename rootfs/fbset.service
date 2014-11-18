@@ -5,7 +5,7 @@ Before=display-manager-run.service
 [Service]
 User=display
 ExecStartPre=/sbin/fbset -a -xres 1280 -yres  720 -vxres 1280 -vyres  720
-ExecStart= /bin/echo 1 > /sys/class/graphics/fb0/enable
+ExecStart=/bin/echo 1 > /sys/class/graphics/fb0/enable
 StandardInput=tty
 TTYPath=/dev/tty7
 
