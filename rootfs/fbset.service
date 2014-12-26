@@ -4,7 +4,10 @@ Before=display-manager-run.service
 
 [Service]
 User=display
+#Radxa Rock
 ExecStartPre=/sbin/fbset -a -xres 1280 -yres  720 -vxres 1280 -vyres  720
+#Firefly-RK3288
+#ExecStartPre=/sbin/fbset -a -xres 1920 -yres 1080 -vxres 1920 -vyres 1080
 ExecStart=/bin/echo 1 > /sys/class/graphics/fb0/enable
 StandardInput=tty
 TTYPath=/dev/tty7
